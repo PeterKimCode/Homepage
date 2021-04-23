@@ -7,12 +7,12 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO posts (title, content) VALUES(?,?)",
-        ('First Post','Content for the first post')
+cur.execute("INSERT INTO posts (title, content, numberr) VALUES(?,?,?)",
+        ('First Post','Content for the first post', '2')
         )
 
-cur.execute("INSERT INTO posts (title, content) VALUES(?,?)",
-        ('Secont Post','content for the second post')
+cur.execute("INSERT INTO posts (title, content, numberr) VALUES(?,?,?)",
+        ('Secont Post','content for the second post', '3')
         )
 
 connection.commit()
