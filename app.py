@@ -74,6 +74,7 @@ def minuspd(id):
     conn.execute('UPDATE posts SET numberr =?'' WHERE id = ?',( int(count)-1, id))
 
     posts = conn.execute('SELECT * FROM posts').fetchall()
+    conn.commit()
     conn.close()
     return render_template('index.html', posts=posts)
 
