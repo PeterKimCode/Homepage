@@ -118,8 +118,8 @@ def delete(id):
 
 def sendTurtleBot(logistics):
     if logistics != None :
-        HOST = '192.168.0.3'
-        PORT = 8001
+        HOST = '121.128.250.194'
+        PORT = 8000
         data = '[flask]:'+logistics
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket.connect((HOST, PORT))
